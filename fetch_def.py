@@ -8,21 +8,21 @@ def get_prononciation(word):
     URL= 'https://www.dictionary.com/browse/'+word
     page=requests.get(URL)
     soup = BeautifulSoup(page.content, 'html.parser')
-    prononciation=soup.find(class_='pron-spell-content css-haaioc-PronSpellIpaContent evh0tcl1')
+    prononciation=soup.find(class_='pron-spell-content css-1ksa987 evh0tcl1')
     return prononciation.text
 def get_wordtype(word):
     word = (word.lower()).strip()
     URL= 'https://www.dictionary.com/browse/'+word
     page=requests.get(URL)
     soup = BeautifulSoup(page.content, 'html.parser')
-    wordtype=soup.find(class_='css-1nsk4bc-BlockTitle e1hk9ate2')
+    wordtype=soup.find(class_='css-chpztc e1hk9ate2')
     return wordtype.text
 def get_meaning(word):
     word = (word.lower()).strip()
     URL= 'https://www.dictionary.com/browse/'+word
     page=requests.get(URL)
     soup = BeautifulSoup(page.content, 'html.parser')
-    meaning=soup.find(class_='one-click-content css-ana4le-PosSupportingInfo e1q3nk1v1')
+    meaning=soup.find(class_='one-click-content css-ibc84h e1q3nk1v1')
     return meaning.text
 def get_WoD(): 
     URL= 'https://www.dictionary.com/e/word-of-the-day'
@@ -33,5 +33,3 @@ def get_WoD():
     w=word.text
     w=w.strip("\n")
     return w
-    
-    

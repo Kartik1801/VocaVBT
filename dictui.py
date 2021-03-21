@@ -145,7 +145,7 @@ class Ui_Dict_Window(object):
         self.pronunciation.setWordWrap(True)
         self.pronunciation.setObjectName("pronunciation")
         self.word_type = QtWidgets.QLabel(self.SR)
-        self.word_type.setGeometry(QtCore.QRect(10, 120, 101, 30))
+        self.word_type.setGeometry(QtCore.QRect(10, 120, 471, 30))
         font = QtGui.QFont()
         font.setFamily("Cambria")
         font.setPointSize(12)
